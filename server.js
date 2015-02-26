@@ -11,9 +11,9 @@ server.route( {
     handler : function ( req, reply ) {
     	stocks.getAllStocks( reply );
     }
-});
+} );
 
-server.register({
+server.register( {
     register : Good,
     options  : {
         reporters : [ {
@@ -28,5 +28,5 @@ server.register({
 
     server.start( function () {
         server.log( 'info', 'Server running at: ' + server.info.uri );
-    });
-});
+    } );
+} );
