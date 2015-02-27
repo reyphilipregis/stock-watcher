@@ -19,9 +19,8 @@ module.exports = function(grunt) {
 
   // Load plugins.
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
+  grunt.registerTask('default', ['jshint']);
 
 };

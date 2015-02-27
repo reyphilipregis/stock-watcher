@@ -9,7 +9,7 @@ server.connection( { port: 3000 } );
 
 server.route( {
     method  : 'GET',
-    path    : '/',
+    path    : '/allstocks',
     handler : function ( req, reply ) {
     	stocks.getAllStocks( reply );
     }
