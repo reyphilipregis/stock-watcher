@@ -1,5 +1,6 @@
 # libraries
 node_modules/
+app/bower_components/
 
 # misc
 *.php

@@ -1,0 +1,23 @@
+{
+  "name": "stock-watcher",
+  "version": "0.0.0",
+  "homepage": "https://github.com/reyphilipregis/stock-watcher",
+  "authors": [
+    "Rey Philip Regis <rey.regis@globalzeal.net>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3",
+    "underscore": "~1.8.2"
+  }
+}
