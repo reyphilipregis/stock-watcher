@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "0.10.22"
+
+before_install:
+  - npm install -g npm
+
+install:
+  # install required dependencies
+  - npm install -g grunt-cli
+  - npm install -g bower
+  - npm install
+  - bower install
+
+before_script:
+  - grunt compile --stack --verbose --release=travis
+
+  # start node to serve public files
+  - node server.js > /dev/null 2>&1 &
+
+script:
+  - grunt lint:travis
