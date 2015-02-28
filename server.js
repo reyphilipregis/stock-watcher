@@ -1,34 +1,25 @@
-'use strict';
+var express        = require( 'express' );
+var app            = express();
+var bodyParser     = require( 'body-parser' );
+var methodOverride = require( 'method-override' );
 
-var Hapi    = require( 'hapi' );
-var Good    = require( 'good' );
-var stocks  = require( './stocks' );
+var port = process.env.PORT || 3000; // set our port
 
-var server = new Hapi.Server();
-server.connection( { port: 3000 } );
+// get all data/stuff of the body (POST) parameters
+app.use( bodyParser.json() );
+app.use( bodyParser.json( { type: 'application/vnd.api+json' } ) );
+app.use( bodyParser.urlencoded( { extended: true } ) );
 
-server.route( {
-    method  : 'GET',
-    path    : '/allstocks',
-    handler : function ( req, reply ) {
-    	stocks.getAllStocks( reply );
-    }
-} );
+// override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
+app.use( methodOverride( 'X-HTTP-Method-Override' ) );
 
-server.register( {
-    register : Good,
-    options  : {
-        reporters : [ {
-            reporter : require( 'good-console' ),
-            args     : [ { log: '*', response: '*' } ]
-        } ]
-    }
-}, function ( err ) {
-    if ( err ) {
-        throw err; // something bad happened loading the plugin
-    }
+// server static files
+app.use( express.static( __dirname + '/public' ) );
 
-    server.start( function () {
-        server.log( 'info', 'Server running at: ' + server.info.uri );
-    } );
-} );
+// routes
+require( './app/routes' )( app ); // pass our application into our routes
+
+// start app
+app.listen( port );
+console.log( 'Magic happens on port ' + port );
+exports = module.exports = app;
