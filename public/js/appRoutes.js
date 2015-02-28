@@ -11,6 +11,11 @@ angular.module( 'appRoutes', [ ] ).config( [ '$routeProvider', '$locationProvide
 		.when( '/dashboard', {
 			templateUrl : 'views/dashboard.html',
 			controller  : 'DashboardController'
+		} )
+
+		.when( '/aboutus', {
+			templateUrl : 'views/aboutus.html',
+			controller  : 'AboutUsController'
 		} );
 
 	$locationProvider.html5Mode( true );
