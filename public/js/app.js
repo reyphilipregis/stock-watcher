@@ -1,1 +1,1 @@
-angular.module( 'StockWatcherApp', [ 'MainCtrl' ] );
+angular.module( 'StockWatcherApp', [ 'ngRoute', 'appRoutes', 'MainCtrl', 'DashboardCtrl' ] );

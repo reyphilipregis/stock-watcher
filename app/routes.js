@@ -10,17 +10,8 @@ module.exports = function( app ) {
 
 	// frontend routes
 	// route to handle all angular requests
-	app.get( '/', function( req, res ) {
+	app.get( '*', function( req, res ) {
 		res.sendfile( './public/index.html' );
 	});
 
-	app.get( '/allstocks', function( req, res ) {
-		request( 'http://phisix-api.appspot.com/stocks.json', function ( error, response, body ) {
-			if ( !error && response.statusCode === 200 ) {
-				res.send( body );
-			} else {
-				res.send( error );
-			}
-		} );
-	});
 };
