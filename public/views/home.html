@@ -18,7 +18,7 @@
 	            </tr>
 	        </thead>
 	        <tbody>
-	            <tr ng-repeat="stock in resultObj.stock  | filter:query | orderBy: 'symbol' ">
+	            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy: 'symbol' ">
 	                <td>{{ stock.symbol }}</td>
 	                <td>{{ stock.name }}</td>
 	                <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
