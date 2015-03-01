@@ -4,6 +4,8 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 
 	// get all the stocks from the PSEi web API
 	StockService.getAllStocks().then( function ( result ) {
+		$scope.pseLabel  = 'Philippines Stock Exchange';
+		$scope.stockDate = result.as_of;
 		$scope.resultObj = result;
 	} );
 

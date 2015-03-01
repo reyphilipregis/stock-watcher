@@ -1,5 +1,9 @@
-<h2>This is the Home Page!</h2>
-<h3>{{ message }}</h3>
+<h2>{{ message }}</h2>
+
+<div ng-show="stockDate" class="pse-label-date-container">
+    <div class="pse-label">{{ pseLabel }}</div>
+    <div class="pse-date">{{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
+</div>
 
  <div class="table-responsive">
     <table class="table">

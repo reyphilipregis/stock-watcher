@@ -5,3 +5,16 @@ td .fa-arrow-up {
 td .fa-arrow-down {
 	color: red;
 }
+
+.pse-label-date-container {
+	padding-left   : 5px;
+	padding-top    : 10px;
+	padding-bottom : 10px;
+	font-size      : 12px;
+}
+
+.pse-label {
+	font-weight : bold;
+	color       : orange;
+	font-size   : 13px;
+}
