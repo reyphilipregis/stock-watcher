@@ -20,6 +20,7 @@
     "bootstrap": "~3.3.2",
     "jquery": "~2.1.3",
     "underscore": "~1.8.2",
-    "angular-route": "latest"
+    "angular-route": "latest",
+    "components-font-awesome": "~4.3.0"
   }
 }

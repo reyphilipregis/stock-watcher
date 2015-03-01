@@ -8,6 +8,7 @@
                 <th>Symbol</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Gain/Loss</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,7 @@
                 <td>{{ stock.symbol }}</td>
                 <td>{{ stock.name }}</td>
                 <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
+                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"></i> {{ stock.percent_change }}</td>
             </tr>
         </tbody>
     </table>

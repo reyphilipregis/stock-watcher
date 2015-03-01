@@ -11,12 +11,6 @@
 
 	<title>PSEi Stock Watcher</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/sortablelist.css">
-	<!-- custom styles -->
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
-
 	  <!-- Bootstrap Core CSS -->
     <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,7 +27,11 @@
     <link href="libs/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stockslist.css">
+    <link rel="stylesheet" href="libs/components-font-awesome/css/font-awesome.min.css">
+
+     <!-- jQuery -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
 
 	<!-- JS -->
 	<script src="libs/angular/angular.min.js"></script>
@@ -45,6 +43,7 @@
 	<script src="js/controllers/DashboardController.js"></script>
 	<script src="js/controllers/AboutUsController.js"></script>
 	<script src="js/services/StockService.js"></script>
+	<script src="js/filters/GainLossFilter.js"></script>
 
 </head>
 
@@ -158,10 +157,10 @@
 			    <a href="#/"><i class="fa fa-home fa-fw"></i> Home</a>
 			</li>
 			<li>
-			    <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+			    <a href="#/news"><i class="fa fa-newspaper-o fa-fw"></i> News</a>
 			</li>
 			<li>
-			    <a href="#/news"><i class="fa fa-news fa-fw"></i> News</a>
+			    <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
 			</li>
 			<li>
 			    <a href="#/aboutus"><i class="fa fa-sitemap fa-fw"></i> About Us</a>
@@ -192,12 +191,6 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="libs/metisMenu/dist/metisMenu.min.js"></script>
