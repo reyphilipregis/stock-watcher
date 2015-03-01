@@ -1,20 +1,21 @@
 <h2>This is the Home Page!</h2>
 <h3>{{ message }}</h3>
 
-<ul class="sortable_list">
-
-	<li class="clearfix header">
-		<div class="listitem_symbol">Symbol</div>
-		<div class="listitem_name">Name</div>
-		<div class="listitem_price">Price</div>
-	</li>
-
-	<div ng-repeat="stock in resultObj.stock">
-		<li id="{{ stock.symbol }}" class="clearfix">
-			<div class="listitem_symbol">{{ stock.symbol }}</div>
-			<div class="listitem_name">{{ stock.name }}</div>
-			<div class="listitem_price">{{ stock.price.currency }} {{ stock.price.amount }}</div>
-		</li>
-	</div>
-
-</ul>
+ <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="stock in resultObj.stock">
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
