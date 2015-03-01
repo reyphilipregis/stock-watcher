@@ -1,7 +1,7 @@
-.fa-arrow-up {
-	color : '#00EB08';
+td .fa-arrow-up {
+	color: green;
 }
 
-.fa-arrow-down {
-	color : '#FF0000';
+td .fa-arrow-down {
+	color: red;
 }
