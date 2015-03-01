@@ -2,13 +2,14 @@
 <div class="container">
 
 	<div ng-show="stockDate" class="pse-label-date-container">
-		<div class="col-sm-4 searchBox">
-			<input ng-model="query" type="text" class="form-control" placeholder="Search . . .">
-		</div>
 	    <div class="pse-label">{{ pseLabel }}</div>
 	    <div class="pse-date">Date today: {{ today | date: 'EEEE, MMMM d, y h:mm a Z'}}</div>
 	    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
 	</div>
+
+    <div ng-show="stockDate" class="searchBox">
+        <input ng-model="query" type="text" class="form-control" placeholder="Search . . .">
+    </div>
 
 	 <div class="table-responsive">
 	    <table class="table">

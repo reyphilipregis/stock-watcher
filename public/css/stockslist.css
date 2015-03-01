@@ -21,6 +21,17 @@ td .fa-arrow-down {
 }
 
 .searchBox {
-	padding-top : 25px;
-	float       : right;
+	padding-top    : 15px;
+	padding-bottom : 5px;
+	width          : 250px;
+}
+
+.container {
+	width : 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    .conatiner {
+        width : 50%;
+    }
 }
