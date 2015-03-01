@@ -11,10 +11,16 @@ td .fa-arrow-down {
 	padding-top    : 10px;
 	padding-bottom : 10px;
 	font-size      : 12px;
+	text-align     : right;
 }
 
 .pse-label {
 	font-weight : bold;
 	color       : orange;
 	font-size   : 13px;
+}
+
+.searchBox {
+	display     : inline-block;
+	padding-top : 25px;
 }

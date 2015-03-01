@@ -1,25 +1,30 @@
 <h2>{{ message }}</h2>
+<div class="container">
 
-<div ng-show="stockDate" class="pse-label-date-container">
-    <div class="pse-label">{{ pseLabel }}</div>
-    <div class="pse-date">Date today: {{ today | date: 'EEEE, MMMM d, y h:mm a Z'}}</div>
-    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
-</div>
+	<div ng-show="stockDate" class="pse-label-date-container">
+		<div class="col-sm-4 searchBox">
+			<input ng-model="query" type="text" class="form-control" placeholder="Filter by...">
+		</div>
+	    <div class="pse-label">{{ pseLabel }}</div>
+	    <div class="pse-date">Date today: {{ today | date: 'EEEE, MMMM d, y h:mm a Z'}}</div>
+	    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
+	</div>
 
- <div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th ng-repeat="headerField in headerFields">{{ headerField }}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="stock in resultObj.stock">
-                <td>{{ stock.symbol }}</td>
-                <td>{{ stock.name }}</td>
-                <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
-                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }} </i></td>
-            </tr>
-        </tbody>
-    </table>
+	 <div class="table-responsive">
+	    <table class="table">
+	        <thead>
+	            <tr>
+	                <th ng-repeat="headerField in headerFields">{{ headerField }}</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr ng-repeat="stock in resultObj.stock  | filter:query | orderBy: 'symbol' ">
+	                <td>{{ stock.symbol }}</td>
+	                <td>{{ stock.name }}</td>
+	                <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
+	                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }} </i></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>
 </div>
