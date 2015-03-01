@@ -5,6 +5,7 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 	var label = 'Philippines Stock Exchange';
 
 	$scope.message        = 'Welcome Investors and Traders! - Main';
+	$scope.headerFields   = [ 'Symbol', 'Name', 'Price', 'Gain/Loss' ];
 	self.secondsToRefresh = 0;
 	self.secondsMax       = 60000; // 1 minute
 

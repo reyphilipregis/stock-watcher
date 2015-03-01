@@ -10,10 +10,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Symbol</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Gain/Loss</th>
+                <th ng-repeat="headerField in headerFields">{{ headerField }}</th>
             </tr>
         </thead>
         <tbody>
