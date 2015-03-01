@@ -13,6 +13,16 @@ StockWatcherApp.config( [ '$routeProvider', function( $routeProvider ) {
 		controller  : 'DashboardController'
 	} ).
 
+	when( '/news', {
+		templateUrl : 'views/news.html',
+		controller  : 'NewsController'
+	} ).
+
+	when( '/reports', {
+		templateUrl : 'views/reports.html',
+		controller  : 'ReportsController'
+	} ).
+
 	when( '/aboutus', {
 		templateUrl : 'views/aboutus.html',
 		controller  : 'AboutUsController'
