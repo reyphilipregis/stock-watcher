@@ -15,8 +15,8 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 
 			StockService.getAllStocks().then( function ( result ) {
 				$scope.pseLabel  = label;
-				//$scope.stockDate = result.as_of;
-				$scope.stockDate = new Date();
+				$scope.stockDate = result.as_of;
+				$scope.today     = new Date();
 				$scope.resultObj = result;
 			} );
 

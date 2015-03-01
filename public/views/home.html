@@ -2,7 +2,8 @@
 
 <div ng-show="stockDate" class="pse-label-date-container">
     <div class="pse-label">{{ pseLabel }}</div>
-    <div class="pse-date">{{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
+    <div class="pse-date">Date today: {{ today | date: 'EEEE, MMMM d, y h:mm a Z'}}</div>
+    <div class="pse-asof">Data as of: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
 </div>
 
  <div class="table-responsive">
