@@ -7,11 +7,11 @@ td .fa-arrow-down {
 }
 
 .pse-label-date-container {
-	padding-left   : 5px;
 	padding-top    : 10px;
 	padding-bottom : 10px;
+	padding-right  : 50px;
 	font-size      : 12px;
-	text-align     : right;
+
 }
 
 .pse-label {
@@ -21,6 +21,6 @@ td .fa-arrow-down {
 }
 
 .searchBox {
-	display     : inline-block;
 	padding-top : 25px;
+	float       : right;
 }
