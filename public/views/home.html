@@ -20,9 +20,9 @@
 	        </thead>
 	        <tbody>
 	            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy: 'symbol' ">
-	                <td>{{ stock.symbol }}</td>
-	                <td>{{ stock.name }}</td>
-	                <td>{{ stock.price.currency }} {{ stock.price.amount }}</td>
+	                <td>{{ stock.symbol | uppercase }}</td>
+	                <td>{{ stock.name | uppercase }}</td>
+	                <td>{{ stock.price.amount | currency : "PHP " }}</td>
 	                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
 	            </tr>
 	        </tbody>
