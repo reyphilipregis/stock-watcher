@@ -6,7 +6,7 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 
 	$scope.message        = 'Welcome Investors and Traders! - Main';
 	self.secondsToRefresh = 0;
-	self.secondsMax       = 60000; // 1 minute
+	self.secondsMax       = 1800000; // 30 minutes
 
 	// get all the stocks from the PSEi web API
 	var stocksUpdator = function () {
