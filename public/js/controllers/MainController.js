@@ -14,7 +14,6 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 		$timeout( function() {
 
 			StockService.getAllStocks().then( function ( result ) {
-				$scope.headerFields = [ 'Symbol', 'Name', 'Price', 'Gain/Loss' ];
 				$scope.pseLabel     = label;
 				$scope.stockDate    = result.as_of;
 				$scope.resultObj    = result;
@@ -27,6 +26,9 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 		}, self.secondsToRefresh );
 
 	};
+
+	$scope.sortField='symbol';
+	$scope.reverse = true;
 
 	stocksUpdator();
 } ] );
