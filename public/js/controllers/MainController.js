@@ -17,7 +17,6 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 				$scope.headerFields = [ 'Symbol', 'Name', 'Price', 'Gain/Loss' ];
 				$scope.pseLabel     = label;
 				$scope.stockDate    = result.as_of;
-				$scope.today        = new Date();
 				$scope.resultObj    = result;
 			} );
 
