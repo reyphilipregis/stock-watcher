@@ -3,14 +3,14 @@
 
 	<div ng-show="stockDate" class="pse-label-date-container">
 	    <div class="pse-label">{{ pseLabel }}</div>
-	    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z'}}</div>
+	    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z' }}</div>
 	</div>
 
     <div ng-show="stockDate" class="searchBox">
         <input ng-model="query" type="text" class="form-control" placeholder="Search . . .">
     </div>
 
-	 <div class="table-responsive" ng-controller="MainController">
+	<div class="table-responsive" ng-controller="MainController">
 	    <table class="table">
 	        <thead>
 	            <tr>

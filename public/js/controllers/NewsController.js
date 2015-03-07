@@ -5,7 +5,7 @@ StockWatcherApp.controller( 'NewsController', [ '$scope', '$q', 'FeedsService', 
 	$scope.message = 'Welcome Investors and Traders! - News';
 
 	FeedsService.getFeeds().then( function ( result ) {
-		console.log( result );
+		$scope.feeds = result.items;
 	} );
 
 } ] );

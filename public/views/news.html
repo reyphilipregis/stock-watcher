@@ -1,2 +1,16 @@
 <h2>This is the News Page!</h2>
 <h3>{{ message }}</h3>
+
+<div class="table-responsive" ng-controller="NewsController">
+	<ul class="newslist" style="list-style-type: none; padding-left:0px;">
+		<li ng-repeat="feed in feeds">
+	        <h4>
+	        	<a href="{{ feed.link[ 0 ] }}" target="_blank">
+	        		{{ feed.title[ 0 ] }}
+	        	</a>
+	        </h4>
+	        <div>{{ feed.date | date : date: 'EEEE, MMMM d, y h:mm:ss a' }}</div>
+	        <span>{{ feed.desc[ 0 ] }}</span>
+		</li>
+	</ul>
+</div>
