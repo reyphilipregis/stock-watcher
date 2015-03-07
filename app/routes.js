@@ -18,7 +18,7 @@ module.exports = function( app ) {
 
 	// query feeds
 	app.get( '/feeds', function( reqnode, respnode ) {
-		parser.parseURL( 'http://www.bworldonline.com/RSS/banking.rss' , function( err, out ) {
+		parser.parseURL( 'http://www.philstar.com/rss/business' , function( err, out ) {
 		   respnode.send( out );
 		} );
 	} );

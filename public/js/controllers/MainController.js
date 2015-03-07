@@ -27,8 +27,8 @@ StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', 
 
 	};
 
-	$scope.sortField='symbol';
-	$scope.reverse = true;
+	$scope.sortField = 'symbol';
+	$scope.reverse   = true;
 
 	stocksUpdator();
 } ] );
