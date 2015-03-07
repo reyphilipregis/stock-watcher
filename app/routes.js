@@ -1,5 +1,6 @@
 'use strict';
 
+var parser  = require('blindparser');
 var request = require( 'request' );
 
 module.exports = function( app ) {
@@ -13,11 +14,18 @@ module.exports = function( app ) {
 				res.send( error );
 			}
 		} );
-	});
+	} );
+
+	// query feeds
+	app.get( '/feeds', function( reqnode, respnode ) {
+		parser.parseURL( 'http://www.bworldonline.com/RSS/banking.rss' , function( err, out ) {
+		   respnode.send( out );
+		} );
+	} );
 
 	// default routes
 	app.get( '*', function( req, res ) {
 		res.sendfile( './public/index.html' );
-	});
+	} );
 
 };
