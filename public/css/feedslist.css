@@ -1,0 +1,23 @@
+.feedslist {
+	list-style-type : none;
+	padding-left    : 0;
+}
+
+.feed-item {
+	border-bottom: 2px solid gray;
+	min-height : 95px;
+	margin-top: 20px;
+}
+
+.feed-item:last-child {
+	border-bottom: 0;
+}
+
+.feed-date {
+	padding-bottom : 5px;
+	font-size      : 12px
+}
+
+.feed-description {
+	padding-bottom : 10px;
+}
