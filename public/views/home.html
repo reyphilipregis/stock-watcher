@@ -1,33 +1,31 @@
-<h2>{{ message }}</h2>
 <div class="container">
-
-	<div ng-show="stockDate" class="pse-label-date-container">
-	    <div class="pse-label">{{ pseLabel }}</div>
-	    <div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z' }}</div>
-	</div>
-
-    <div ng-show="stockDate" class="searchBox">
-        <input ng-model="query" type="text" class="form-control" placeholder="Search . . .">
-    </div>
-
-	<div class="table-responsive" ng-controller="MainController">
-	    <table class="table">
-	        <thead>
-	            <tr>
-	            	<th ng-click = "sortField='symbol'; reverse=!reverse">Symbol <i class="fa fa-sort"</i></th>
-	            	<th ng-click = "sortField='name'; reverse=!reverse">Name <i class="fa fa-sort"</i></th>
-	            	<th ng-click = "sortField='price.amount'; reverse=!reverse">Price <i class="fa fa-sort"</i></th>
-	            	<th ng-click = "sortField='percent_change'; reverse=!reverse">Gain/Loss <i class="fa fa-sort"</i></th>
-	            </tr>
-	        </thead>
-	        <tbody>
-	            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy:sortField:!reverse">
-	                <td>{{ stock.symbol | uppercase }}</td>
-	                <td>{{ stock.name | uppercase }}</td>
-	                <td>{{ stock.price.amount | currency : 'PHP ' }}</td>
-	                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
-	            </tr>
-	        </tbody>
-	    </table>
+	<div class="panel panel-default" ng-show="stockDate">
+		<div class="panel-heading">
+			<div class="pse-label"><h2>{{ pseLabel }}</h2></div>
+	    	<div class="pse-asof">Last Updated: {{ stockDate | date: 'EEEE, MMMM d, y h:mm:ss a Z' }}</div>
+	    	<div ng-show="stockDate" class="searchBox">
+		        <input ng-model="query" type="text" class="form-control" placeholder="Search . . .">
+		    </div>
+		</div>
+		<div class="table-responsive" ng-controller="MainController">
+		    <table class="table table-striped table-bordered table-hover">
+		        <thead>
+		            <tr>
+		            	<th ng-click = "sortField='symbol'; reverse=!reverse">Symbol <i class="fa fa-sort"</i></th>
+		            	<th ng-click = "sortField='name'; reverse=!reverse">Name <i class="fa fa-sort"</i></th>
+		            	<th ng-click = "sortField='price.amount'; reverse=!reverse">Price <i class="fa fa-sort"</i></th>
+		            	<th ng-click = "sortField='percent_change'; reverse=!reverse">Gain/Loss <i class="fa fa-sort"</i></th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy:sortField:!reverse">
+		                <td>{{ stock.symbol | uppercase }}</td>
+		                <td>{{ stock.name | uppercase }}</td>
+		                <td>{{ stock.price.amount | currency : 'PHP ' }}</td>
+		                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
 	</div>
 </div>
