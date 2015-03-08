@@ -1,2 +1,42 @@
 <h2>This is the Reports Page!</h2>
 <h3>{{ message }}</h3>
+
+<div class="table-responsive top-stock-gainers" ng-controller="ReportsController" style="border:1px solid black; margin-bottom:50px;">
+	<table width="100%">
+	<tr>
+		<th colspan="4">Top 10 Gainers</th>
+	</tr>
+	<tr>
+		<th>Symbol</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Gain/Loss</th>
+	</tr>
+	<tr ng-repeat="stock in resultObj.stock | orderBy: 'percent_change' : reverse | limitTo : 10">
+		<td> {{ stock.symbol }} </td>
+		<td> {{ stock.name }} </td>
+		<td>{{ stock.price.amount | currency : 'PHP ' }}</td>
+		<td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
+	</tr>
+	</table>
+</div>
+
+<div class="table-responsive top-stock-losers" ng-controller="ReportsController" style="border:1px solid black; margin-bottom:50px;">
+	<table width="100%">
+	<tr>
+		<th colspan="4">Top 10 Losers</th>
+	</tr>
+	<tr>
+		<th>Symbol</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Gain/Loss</th>
+	</tr>
+	<tr ng-repeat="stock in resultObj.stock | orderBy: 'percent_change' : !reverse | limitTo : 10">
+		<td> {{ stock.symbol }} </td>
+		<td> {{ stock.name }} </td>
+		<td>{{ stock.price.amount | currency : 'PHP ' }}</td>
+		<td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
+	</tr>
+	</table>
+</div>

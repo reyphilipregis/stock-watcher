@@ -21,7 +21,7 @@
 	            </tr>
 	        </thead>
 	        <tbody>
-	            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy:sortField:!reverse ">
+	            <tr ng-repeat="stock in resultObj.stock | filter: query | orderBy:sortField:!reverse">
 	                <td>{{ stock.symbol | uppercase }}</td>
 	                <td>{{ stock.name | uppercase }}</td>
 	                <td>{{ stock.price.amount | currency : 'PHP ' }}</td>
