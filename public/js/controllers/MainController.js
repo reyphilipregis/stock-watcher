@@ -2,7 +2,7 @@
 
 StockWatcherApp.controller( 'MainController', [ '$scope', '$q', 'StockService', '$timeout', function( $scope, $q, StockService, $timeout ) {
 	var self  = this;
-	var label = 'Philippines Stock Exchange';
+	var label = 'Philippines Stock Exchange Watcher';
 
 	$scope.message        = 'Welcome Investors and Traders! - Main';
 	self.secondsToRefresh = 0;
