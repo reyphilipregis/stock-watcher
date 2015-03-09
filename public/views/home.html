@@ -15,6 +15,7 @@
 		            	<th ng-click = "sortField='name'; reverse=!reverse">Name <i class="fa fa-sort"</i></th>
 		            	<th ng-click = "sortField='price.amount'; reverse=!reverse">Price <i class="fa fa-sort"</i></th>
 		            	<th ng-click = "sortField='percent_change'; reverse=!reverse">Gain/Loss <i class="fa fa-sort"</i></th>
+		            	<th>&nbsp;</th>
 		            </tr>
 		        </thead>
 		        <tbody>
@@ -23,7 +24,7 @@
 		                <td>{{ stock.name | uppercase }}</td>
 		                <td>{{ stock.price.amount | currency : 'PHP ' }}</td>
 		                <td><i class="fa {{  stock.percent_change | GainLossFilter }}"> {{ stock.percent_change }}% </i></td>
-		            </tr>
+		                <td class="add-dashboard"><i class="fa fa-plus-circle add-dashboard-icon"></i></td>
 		        </tbody>
 		    </table>
 		</div>

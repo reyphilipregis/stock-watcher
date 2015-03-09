@@ -35,3 +35,13 @@ td .fa-arrow-down {
         width : 50%;
     }
 }
+
+.add-dashboard {
+	text-align : center;
+	font-size  : 18px;
+	color      : #36A611;
+}
+
+.add-dashboard-icon {
+	cursor : pointer;
+}
