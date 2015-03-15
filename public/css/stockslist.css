@@ -45,3 +45,7 @@ td .fa-arrow-down {
 .add-dashboard-icon {
 	cursor : pointer;
 }
+
+div {
+	font-family : helvitica;
+}
