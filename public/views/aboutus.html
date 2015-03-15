@@ -1,2 +1,34 @@
-<h2>This is the AboutUs Page!</h2>
 <h3>{{ message }}</h3>
+
+<div class="aboutus-container">
+
+	<div class="meet-the-team">
+		<h3>Meet the Team</h3>
+	</div>
+
+	<ul class="members-list">
+
+		<li class="member-holder" ng-repeat="member in members">
+			<div class="member-container">
+
+				<span class="member-left">
+					<img src="images/{{ member.picture }}" />
+				</span>
+
+				<span class="member-right">
+					<div class="member-profile">
+						<div class="member-name">{{ member.name }}</div>
+						<div class="member-position">{{ member.title }}</div>
+					</div>
+
+					<div class="member-description">
+						{{ member.description }}
+					</div>
+				</span>
+
+			</div>
+		</li>
+
+	</ul>
+
+</div>

@@ -1,0 +1,55 @@
+.aboutus-container {
+	padding-left : 5px;
+}
+
+.meet-the-team {
+	padding-top : 15px;
+}
+
+.members-list {
+	list-style-type : none;
+	padding         : 0;
+	margin-top      : 30px;
+}
+
+.member-holder {
+	padding-bottom : 80px;
+}
+
+.member-container {
+	overflow : auto;
+}
+
+.member-left {
+	float : left;
+	width : 240px;
+}
+
+.member-left > img {
+	width  : 200px;
+	height : 200px;
+}
+
+.member-right {
+	float : left;
+	width : 500px;
+}
+
+.member-profile {
+	margin-bottom : 30px;
+}
+
+.member-name {
+	font-weight : bold;
+	font-size   : 20px;
+}
+
+.member-position {
+	color       : #D66000;
+	font-size   : 18px;
+	font-weight : bold;
+}
+
+.member-description {
+	text-align : justify;
+}
