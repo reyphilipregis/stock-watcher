@@ -23,6 +23,11 @@ module.exports = function( app ) {
 		} );
 	} );
 
+	// login route
+	app.get( '/login', function( req, res ) {
+		res.sendfile( './public/login.html' );
+	} );
+
 	// default routes
 	app.get( '*', function( req, res ) {
 		res.sendfile( './public/index.html' );
